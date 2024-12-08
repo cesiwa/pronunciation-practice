@@ -1,39 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
+import useRecorder from "./useRecorder";
 
-const AudioRecorder = () => {
-  const [mediaRecorder, setMediaRecorder] = useState(null);
-  const [audioURL, setAudioURL] = useState("");
-
-  const startRecording = async () => {
-    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    const recorder = new MediaRecorder(stream);
-    setMediaRecorder(recorder);
-
-    recorder.start();
-
-    recorder.ondataavailable = (e) => {
-      const audioBlob = new Blob([e.data], { type: "audio/wav" });
-      const audioURL = URL.createObjectURL(audioBlob);
-      setAudioURL(audioURL);
-
-      // Opsiyonel: Dosyayı backend'e gönder
-      // uploadToServer(audioBlob);
-    };
-  };
-
-  const stopRecording = () => {
-    if (mediaRecorder) {
-      mediaRecorder.stop();
-    }
-  };
+function AudioRecorder() {
+  const { audioURL, isRecording, startRecording, stopRecording } =
+    useRecorder();
 
   return (
-    <div>
-      <button onClick={startRecording}>Kaydet</button>
-      <button onClick={stopRecording}>Durdur</button>
-      {audioURL && <audio controls src={audioURL}></audio>}
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Ses Kaydedici</h1>
+      <button onClick={isRecording ? stopRecording : startRecording}>
+        {isRecording ? "Kaydı Durdur" : "Kayda Başla"}
+      </button>
+      {audioURL && (
+        <div>
+          <h3>Kaydedilen Ses</h3>
+          <audio controls src={audioURL}></audio>
+        </div>
+      )}
     </div>
   );
-};
+}
 
 export default AudioRecorder;
