@@ -19,10 +19,10 @@ function SelectPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-blue-600	">
       <Header />
       <main className="flex flex-col items-center justify-center py-10">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">
+        <h2 className="text-2xl font-bold text-white mb-6">
           Choose Your Level
         </h2>
 
@@ -58,7 +58,7 @@ function SelectPage() {
         {/* Start Learning Butonu */}
         <button
           onClick={handleStartLearning}
-          className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700"
+          className="bg-blue-800 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700"
         >
           Start Learning
         </button>
