@@ -1,15 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-import LevelPage from "./pages/LevelPage";
-import AudioRecorder from "./components/AudioRecorder";
+import HomePage from "./pages/HomePage";
+import SelectPage from "./pages/SelectPage";
+import LearningPage from "./pages/LearningPage";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<AudioRecorder />} />
-        <Route path="/level/:level" element={<LevelPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/select" element={<SelectPage />} />
+        <Route path="/learning" element={<LearningPage />} />
       </Routes>
     </Router>
   );
