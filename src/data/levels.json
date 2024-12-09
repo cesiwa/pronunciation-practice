@@ -1,0 +1,522 @@
+[
+  {
+    "id": 1,
+    "level": "A1",
+    "topics": [
+      {
+        "id": 1,
+        "name": "Daily Life",
+        "words": [
+          { "word": "family", "definition": "A group of related individuals" },
+          { "word": "breakfast", "definition": "The first meal of the day" },
+          { "word": "home", "definition": "The place where you live" },
+          { "word": "friend", "definition": "A person you like and trust" },
+          { "word": "school", "definition": "A place for education" },
+          { "word": "sleep", "definition": "Resting with your eyes closed" },
+          { "word": "water", "definition": "A liquid we drink to stay alive" },
+          { "word": "food", "definition": "What we eat to live" },
+          { "word": "phone", "definition": "A device used for communication" },
+          { "word": "shopping", "definition": "The activity of buying goods" }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Work and Business",
+        "words": [
+          { "word": "job", "definition": "Work that you do regularly for money" },
+          { "word": "office", "definition": "A place where people work" },
+          { "word": "computer", "definition": "A machine used for work and entertainment" },
+          { "word": "money", "definition": "What you use to buy things" },
+          { "word": "boss", "definition": "A person who manages workers" },
+          { "word": "colleague", "definition": "A person you work with" },
+          { "word": "email", "definition": "Electronic mail" },
+          { "word": "project", "definition": "A planned piece of work" },
+          { "word": "meeting", "definition": "A gathering of people for discussion" },
+          { "word": "deadline", "definition": "A date by which something must be done" }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Travel",
+        "words": [
+          { "word": "ticket", "definition": "A piece of paper to travel" },
+          { "word": "passport", "definition": "An official document for travel" },
+          { "word": "train", "definition": "A vehicle that moves on rails" },
+          { "word": "airport", "definition": "A place where airplanes take off and land" },
+          { "word": "hotel", "definition": "A place to stay when traveling" },
+          { "word": "bag", "definition": "A container to carry things" },
+          { "word": "map", "definition": "A diagram showing locations" },
+          { "word": "taxi", "definition": "A car you pay to travel in" },
+          { "word": "beach", "definition": "A sandy area near the sea" },
+          { "word": "guide", "definition": "A person who shows the way" }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Technology",
+        "words": [
+          { "word": "computer", "definition": "A machine used to process data" },
+          { "word": "internet", "definition": "A global network connecting devices" },
+          { "word": "phone", "definition": "A portable device for communication" },
+          { "word": "app", "definition": "A program on a smartphone" },
+          { "word": "email", "definition": "Electronic mail" },
+          { "word": "website", "definition": "A collection of related web pages" },
+          { "word": "keyboard", "definition": "A device used for typing" },
+          { "word": "mouse", "definition": "A device to move a cursor" },
+          { "word": "screen", "definition": "The display part of a device" },
+          { "word": "charger", "definition": "A device to power a battery" }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Health and Fitness",
+        "words": [
+          { "word": "exercise", "definition": "Physical activity to stay healthy" },
+          { "word": "diet", "definition": "The food you eat regularly" },
+          { "word": "doctor", "definition": "A person trained to treat the sick" },
+          { "word": "medicine", "definition": "A substance for treating illness" },
+          { "word": "gym", "definition": "A place to work out" },
+          { "word": "health", "definition": "The state of being well" },
+          { "word": "yoga", "definition": "A practice for physical and mental well-being" },
+          { "word": "run", "definition": "To move quickly on foot" },
+          { "word": "sleep", "definition": "Resting with eyes closed" },
+          { "word": "water", "definition": "Essential for hydration" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "level": "A2",
+    "topics": [
+      {
+        "id": 6,
+        "name": "Daily Life",
+        "words": [
+          { "word": "neighborhood", "definition": "The area around where you live" },
+          { "word": "routine", "definition": "A regular way of doing things" },
+          { "word": "weekend", "definition": "The days at the end of the week" },
+          { "word": "holiday", "definition": "A day for celebration or relaxation" },
+          { "word": "laundry", "definition": "Clothes that need to be washed" },
+          { "word": "shopping mall", "definition": "A large building with many stores" },
+          { "word": "alarm clock", "definition": "A clock that wakes you up" },
+          { "word": "commute", "definition": "The journey to and from work" },
+          { "word": "pet", "definition": "An animal kept at home" },
+          { "word": "neighbor", "definition": "A person who lives nearby" }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Work and Business",
+        "words": [
+          { "word": "contract", "definition": "A formal agreement" },
+          { "word": "salary", "definition": "Money you earn from work" },
+          { "word": "teamwork", "definition": "Working together as a group" },
+          { "word": "promotion", "definition": "A rise in position or rank" },
+          { "word": "office supplies", "definition": "Things used for work like pens and paper" },
+          { "word": "supervisor", "definition": "A person who oversees work" },
+          { "word": "schedule", "definition": "A plan for activities or events" },
+          { "word": "presentation", "definition": "A formal talk or display" },
+          { "word": "client", "definition": "A person who uses a service" },
+          { "word": "task", "definition": "A piece of work to be done" }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Travel",
+        "words": [
+          { "word": "tourist", "definition": "A person who travels for fun" },
+          { "word": "guidebook", "definition": "A book with information for travelers" },
+          { "word": "suitcase", "definition": "A bag for carrying clothes during travel" },
+          { "word": "cruise", "definition": "A holiday on a large ship" },
+          { "word": "tour", "definition": "A trip for sightseeing" },
+          { "word": "itinerary", "definition": "A planned route or journey" },
+          { "word": "adventure", "definition": "An exciting experience" },
+          { "word": "souvenir", "definition": "An item to remember a place" },
+          { "word": "backpack", "definition": "A bag carried on the back" },
+          { "word": "landmark", "definition": "An important or famous place" }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Technology",
+        "words": [
+          { "word": "smartphone", "definition": "A mobile phone with advanced features" },
+          { "word": "software", "definition": "Programs used by a computer" },
+          { "word": "download", "definition": "To transfer data to your device" },
+          { "word": "upload", "definition": "To transfer data from your device" },
+          { "word": "Wi-Fi", "definition": "A wireless network for internet access" },
+          { "word": "password", "definition": "A secret code for access" },
+          { "word": "tablet", "definition": "A portable touch-screen device" },
+          { "word": "file", "definition": "A collection of data stored digitally" },
+          { "word": "search engine", "definition": "A tool to find information online" },
+          { "word": "account", "definition": "A personal profile on a platform" }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Health and Fitness",
+        "words": [
+          { "word": "clinic", "definition": "A small healthcare facility" },
+          { "word": "symptom", "definition": "A sign of illness" },
+          { "word": "appointment", "definition": "A scheduled meeting with a doctor" },
+          { "word": "nutrition", "definition": "The food and nutrients you consume" },
+          { "word": "weight", "definition": "A measure of how heavy someone is" },
+          { "word": "workout", "definition": "A session of physical exercise" },
+          { "word": "stress", "definition": "Mental or emotional strain" },
+          { "word": "relaxation", "definition": "The state of being free from tension" },
+          { "word": "infection", "definition": "A disease caused by germs" },
+          { "word": "recovery", "definition": "The process of getting better after illness" }
+        ]
+      }
+    ]
+  },  
+  {
+    "id": 3,
+    "level": "B1",
+    "topics": [
+      {
+        "id": 11,
+        "name": "Daily Life",
+        "words": [
+          { "word": "routine", "definition": "A regular series of actions or events" },
+          { "word": "neighborhood", "definition": "A district or area where people live" },
+          { "word": "apartment", "definition": "A set of rooms forming a residence" },
+          { "word": "commute", "definition": "To travel to work or school regularly" },
+          { "word": "vacuum", "definition": "A cleaning device that uses suction" },
+          { "word": "laundry", "definition": "Clothes that need washing or cleaning" },
+          { "word": "grocery shopping", "definition": "The act of buying food and household items" },
+          { "word": "calendar", "definition": "A system of organizing days for social, religious, or administrative purposes" },
+          { "word": "appointment", "definition": "A prearranged meeting" },
+          { "word": "chore", "definition": "A small job or task, typically one that is repeated" }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Work and Business",
+        "words": [
+          { "word": "promotion", "definition": "Advancement to a higher position in a company" },
+          { "word": "deadline", "definition": "The time by which a task must be completed" },
+          { "word": "salary", "definition": "The amount of money paid to someone for work" },
+          { "word": "contract", "definition": "A formal written agreement" },
+          { "word": "colleague", "definition": "A person you work with" },
+          { "word": "interview", "definition": "A formal conversation to assess someone's suitability for a job" },
+          { "word": "presentation", "definition": "A talk given to inform or explain something to an audience" },
+          { "word": "networking", "definition": "The act of building professional relationships" },
+          { "word": "freelancer", "definition": "A person who works for themselves and not for a company" },
+          { "word": "workload", "definition": "The amount of work assigned to someone" }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Travel",
+        "words": [
+          { "word": "destination", "definition": "The place to which you are traveling" },
+          { "word": "itinerary", "definition": "A detailed plan of a trip" },
+          { "word": "tourism", "definition": "The business of organizing trips for people" },
+          { "word": "hotel", "definition": "A building offering lodging, meals, and other services" },
+          { "word": "reservation", "definition": "Booking a place, seat, or accommodation in advance" },
+          { "word": "luggage", "definition": "Bags and suitcases used for traveling" },
+          { "word": "explore", "definition": "To travel around a place to learn more about it" },
+          { "word": "adventure", "definition": "An exciting or unusual experience" },
+          { "word": "sightseeing", "definition": "Visiting interesting places as a tourist" },
+          { "word": "cruise", "definition": "A journey on a ship, often for pleasure" }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Technology",
+        "words": [
+          { "word": "device", "definition": "An electronic tool or gadget" },
+          { "word": "software", "definition": "Programs or applications used on computers or devices" },
+          { "word": "internet", "definition": "A global system of connected computers" },
+          { "word": "app", "definition": "A software application for mobile devices" },
+          { "word": "website", "definition": "A collection of web pages on the internet" },
+          { "word": "update", "definition": "To bring something up to date or improve it" },
+          { "word": "social media", "definition": "Websites and applications that allow users to share content" },
+          { "word": "security", "definition": "Protection against unauthorized access or harm" },
+          { "word": "cloud", "definition": "A system of storing data on remote servers accessed via the internet" },
+          { "word": "data", "definition": "Information processed or stored by a computer" }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Health and Fitness",
+        "words": [
+          { "word": "exercise", "definition": "Physical activity to maintain or improve health" },
+          { "word": "diet", "definition": "The types of food a person eats" },
+          { "word": "nutrition", "definition": "The process of taking in and using food" },
+          { "word": "hydration", "definition": "The process of drinking enough water" },
+          { "word": "well-being", "definition": "A state of being healthy and happy" },
+          { "word": "weight loss", "definition": "The process of reducing body weight" },
+          { "word": "yoga", "definition": "A system of physical and mental exercises" },
+          { "word": "stress", "definition": "Mental or emotional strain resulting from difficult situations" },
+          { "word": "vitamins", "definition": "Essential nutrients that the body needs" },
+          { "word": "sleep", "definition": "The natural state of rest for the body and mind" }
+        ]
+      }
+    ]
+  }
+  ,
+  {
+    "id": 4,
+    "level": "B2",
+    "topics": [
+      {
+        "id": 16,
+        "name": "Daily Life",
+        "words": [
+          { "word": "routine", "definition": "A regular series of actions performed daily" },
+          { "word": "neighborhood", "definition": "An area of a town or city, especially one with houses" },
+          { "word": "errand", "definition": "A short journey to do something" },
+          { "word": "habit", "definition": "A regular activity or behavior" },
+          { "word": "chores", "definition": "Regularly performed tasks around the house" },
+          { "word": "reliability", "definition": "The quality of being dependable" },
+          { "word": "calendar", "definition": "A system used to organize days, months, and years" },
+          { "word": "budget", "definition": "A plan for how to spend and save money" },
+          { "word": "vacuuming", "definition": "The act of cleaning with a vacuum cleaner" },
+          { "word": "laundry", "definition": "Clothes that need washing or have been washed" }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Work and Business",
+        "words": [
+          { "word": "promotion", "definition": "Advancement in rank or status in a company" },
+          { "word": "conference", "definition": "A large formal meeting to discuss a specific topic" },
+          { "word": "negotiation", "definition": "The process of discussing terms or agreements" },
+          { "word": "colleague", "definition": "A person who works with you in the same organization" },
+          { "word": "resignation", "definition": "The act of leaving a job or position" },
+          { "word": "freelance", "definition": "Working for oneself, rather than being employed by a company" },
+          { "word": "enterprise", "definition": "A business or company, especially a small one" },
+          { "word": "leadership", "definition": "The ability to lead a group or organization" },
+          { "word": "deadline", "definition": "A time or date by which a task must be finished" },
+          { "word": "workflow", "definition": "The sequence of steps involved in completing a task" }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Travel",
+        "words": [
+          { "word": "exploration", "definition": "The act of traveling to discover new places" },
+          { "word": "backpacking", "definition": "Traveling with a backpack, usually on a budget" },
+          { "word": "vacation", "definition": "A period of time spent away from work for relaxation" },
+          { "word": "cultural exchange", "definition": "The exchange of cultural ideas and experiences between countries" },
+          { "word": "local cuisine", "definition": "The traditional food of a particular area or region" },
+          { "word": "tourist attraction", "definition": "A place or site visited by tourists" },
+          { "word": "excursion", "definition": "A short trip or outing for leisure" },
+          { "word": "guidebook", "definition": "A book that provides detailed information for tourists" },
+          { "word": "hostel", "definition": "A low-cost place to stay, often used by young travelers" },
+          { "word": "jet lag", "definition": "Tiredness or other symptoms caused by traveling across time zones" }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Technology",
+        "words": [
+          { "word": "cloud computing", "definition": "The delivery of computing services over the internet" },
+          { "word": "artificial intelligence", "definition": "The simulation of human intelligence in machines" },
+          { "word": "innovation", "definition": "The introduction of new ideas, methods, or devices" },
+          { "word": "virtual reality", "definition": "A simulated experience created by computer technology" },
+          { "word": "automation", "definition": "The use of machines and technology to perform tasks without human intervention" },
+          { "word": "smartphone", "definition": "A mobile phone that has advanced capabilities beyond voice communication" },
+          { "word": "internet of things", "definition": "The connection of everyday objects to the internet" },
+          { "word": "cybersecurity", "definition": "The protection of computer systems from theft or damage" },
+          { "word": "networking", "definition": "The practice of connecting computers or devices to share data" },
+          { "word": "software development", "definition": "The process of designing and creating computer programs" }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Health and Fitness",
+        "words": [
+          { "word": "nutrition", "definition": "The process of providing the body with the right nutrients" },
+          { "word": "workout", "definition": "Physical exercise, especially to improve health and fitness" },
+          { "word": "cardio", "definition": "Exercise that raises the heart rate, such as running or swimming" },
+          { "word": "muscle", "definition": "A body tissue that contracts to produce movement" },
+          { "word": "fitness routine", "definition": "A set plan for regular physical exercise" },
+          { "word": "yoga", "definition": "A practice of physical and mental exercises for health" },
+          { "word": "meditation", "definition": "The practice of focusing the mind to achieve mental clarity" },
+          { "word": "sleep hygiene", "definition": "Practices that promote better sleep quality" },
+          { "word": "hydration", "definition": "The process of providing the body with enough water" },
+          { "word": "calorie", "definition": "A unit of energy provided by food" }
+        ]
+      }
+    ]
+  }
+  ,
+  {
+    "id": 5,
+    "level": "C1",
+    "topics": [
+      {
+        "id": 21,
+        "name": "Daily Life",
+        "words": [
+          { "word": "self-discipline", "definition": "The ability to control one's behavior and emotions" },
+          { "word": "prioritization", "definition": "The process of deciding what tasks are most important" },
+          { "word": "well-being", "definition": "A state of being comfortable, healthy, or happy" },
+          { "word": "sustainability", "definition": "The ability to maintain a certain process or state indefinitely" },
+          { "word": "adaptability", "definition": "The ability to adjust to new conditions" },
+          { "word": "community engagement", "definition": "Participation in activities that benefit the community" },
+          { "word": "independence", "definition": "The ability to make decisions and act without relying on others" },
+          { "word": "mindfulness", "definition": "The practice of being aware of the present moment" },
+          { "word": "efficiency", "definition": "The ability to achieve maximum productivity with minimum effort" },
+          { "word": "resilience", "definition": "The capacity to recover quickly from difficulties" }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Work and Business",
+        "words": [
+          { "word": "entrepreneurship", "definition": "The activity of starting and running a business" },
+          { "word": "strategic planning", "definition": "The process of defining long-term goals and determining the actions required" },
+          { "word": "market research", "definition": "The process of gathering and analyzing information about the market" },
+          { "word": "corporate culture", "definition": "The shared values, beliefs, and practices within a company" },
+          { "word": "innovation", "definition": "The introduction of new ideas, methods, or products" },
+          { "word": "stakeholder", "definition": "A person or group with an interest or concern in something" },
+          { "word": "branding", "definition": "The process of creating a unique image and name for a product in the consumer's mind" },
+          { "word": "negotiation skills", "definition": "The ability to reach agreements in a way that benefits all parties" },
+          { "word": "leadership development", "definition": "The process of enhancing the skills of individuals to lead others" },
+          { "word": "financial analysis", "definition": "The process of evaluating financial data to make business decisions" }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Travel",
+        "words": [
+          { "word": "sustainable tourism", "definition": "Tourism that does not harm the environment or local culture" },
+          { "word": "cultural immersion", "definition": "Fully engaging in the culture of a foreign country" },
+          { "word": "luxury travel", "definition": "Travel that offers high-end, exclusive experiences" },
+          { "word": "sightseeing", "definition": "The activity of visiting interesting places and attractions" },
+          { "word": "adventure tourism", "definition": "Travel that involves exploration or physical challenges" },
+          { "word": "travel itinerary", "definition": "A detailed plan or route of travel" },
+          { "word": "ecotourism", "definition": "Tourism that focuses on nature conservation and responsible travel" },
+          { "word": "off-the-beaten-path", "definition": "Locations or experiences that are not commonly visited by tourists" },
+          { "word": "local customs", "definition": "Traditional behaviors or practices of a specific region" },
+          { "word": "volunteer tourism", "definition": "Travel that involves volunteering for local community projects" }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Technology",
+        "words": [
+          { "word": "blockchain", "definition": "A decentralized digital ledger used for secure transactions" },
+          { "word": "augmented reality", "definition": "Technology that overlays digital content onto the real world" },
+          { "word": "cyberattack", "definition": "An attempt to damage or disrupt computer systems or networks" },
+          { "word": "machine learning", "definition": "A form of artificial intelligence that allows computers to learn from data" },
+          { "word": "data privacy", "definition": "The protection of personal data from unauthorized access or use" },
+          { "word": "cloud storage", "definition": "The practice of storing data on remote servers accessible via the internet" },
+          { "word": "digital transformation", "definition": "The integration of digital technology into all aspects of business" },
+          { "word": "quantum computing", "definition": "The use of quantum-mechanical phenomena to perform computations" },
+          { "word": "user experience", "definition": "The overall experience a person has when interacting with a product or service" },
+          { "word": "cryptocurrency", "definition": "A digital or virtual currency that uses cryptography for security" }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "Health and Fitness",
+        "words": [
+          { "word": "mental health", "definition": "A person’s emotional, psychological, and social well-being" },
+          { "word": "wellness", "definition": "The state of being in good health, especially as an actively pursued goal" },
+          { "word": "biohacking", "definition": "The practice of using science and technology to improve the body" },
+          { "word": "preventive healthcare", "definition": "Measures taken to prevent illness or injury before it occurs" },
+          { "word": "nutritional supplement", "definition": "A product taken to add nutrients to the diet" },
+          { "word": "fitness tracker", "definition": "A device used to monitor physical activity and health metrics" },
+          { "word": "holistic health", "definition": "An approach to health that considers the whole person, including mental and emotional well-being" },
+          { "word": "detox", "definition": "The process of removing toxins from the body" },
+          { "word": "rehabilitation", "definition": "The process of recovering from an injury or illness" },
+          { "word": "immune system", "definition": "The body's defense system against infections and diseases" }
+        ]
+      }
+    ]
+  }
+  ,
+  {
+    "id": 6,
+    "level": "C2",
+    "topics": [
+      {
+        "id": 26,
+        "name": "Daily Life",
+        "words": [
+          { "word": "existentialism", "definition": "A philosophical theory that emphasizes individual freedom and responsibility" },
+          { "word": "self-actualization", "definition": "The realization or fulfillment of one's talents and potential" },
+          { "word": "stoicism", "definition": "An ancient Greek philosophy that teaches self-control and fortitude" },
+          { "word": "philanthropy", "definition": "The desire to promote the welfare of others, usually through charitable donations" },
+          { "word": "mind-body connection", "definition": "The relationship between a person’s thoughts, emotions, and physical health" },
+          { "word": "self-reflection", "definition": "The process of examining and evaluating one's own thoughts and behavior" },
+          { "word": "ephemeral", "definition": "Lasting for a very short time" },
+          { "word": "catharsis", "definition": "The process of releasing strong emotions in order to achieve emotional relief" },
+          { "word": "resilience", "definition": "The capacity to recover quickly from difficulties or challenges" },
+          { "word": "existential crisis", "definition": "A period of deep questioning and uncertainty about life’s purpose or meaning" }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "Work and Business",
+        "words": [
+          { "word": "synergy", "definition": "The interaction of multiple elements to produce a combined effect greater than the sum of their individual effects" },
+          { "word": "strategic foresight", "definition": "The ability to anticipate future trends and challenges to make informed decisions" },
+          { "word": "corporate governance", "definition": "The system of rules, practices, and processes by which a company is directed and controlled" },
+          { "word": "organizational behavior", "definition": "The study of how people interact within groups in a business environment" },
+          { "word": "disruptive innovation", "definition": "Innovations that create new markets and value networks, disrupting existing markets" },
+          { "word": "supply chain management", "definition": "The management of the flow of goods and services from raw material to end user" },
+          { "word": "venture capital", "definition": "Funding provided to early-stage, high-potential startups" },
+          { "word": "corporate social responsibility", "definition": "A business model where companies integrate social and environmental concerns into their operations" },
+          { "word": "shareholder value", "definition": "The value delivered to shareholders through dividends, stock price increases, etc." },
+          { "word": "strategic alliances", "definition": "Partnerships between companies to achieve mutually beneficial objectives" }
+        ]
+      },
+      {
+        "id": 28,
+        "name": "Travel",
+        "words": [
+          { "word": "cultural relativism", "definition": "The belief that a person's beliefs and activities should be understood in terms of their culture" },
+          { "word": "globetrotting", "definition": "Traveling widely or extensively around the world" },
+          { "word": "expat", "definition": "A person who lives outside their native country" },
+          { "word": "subculture", "definition": "A cultural group within a larger culture, often having distinct values or practices" },
+          { "word": "luxury tourism", "definition": "Travel involving premium accommodations, experiences, and services" },
+          { "word": "nomadic lifestyle", "definition": "A lifestyle of moving from place to place without a permanent home" },
+          { "word": "ecological footprint", "definition": "The amount of environmental impact an individual or community has" },
+          { "word": "cultural assimilation", "definition": "The process of adopting the cultural norms of a dominant group" },
+          { "word": "heritage tourism", "definition": "Travel that focuses on experiencing and preserving historical sites and cultural heritage" },
+          { "word": "remote work", "definition": "Working from a location outside of a traditional office setting, often from home or abroad" }
+        ]
+      },
+      {
+        "id": 29,
+        "name": "Technology",
+        "words": [
+          { "word": "artificial intelligence", "definition": "The simulation of human intelligence in machines that are programmed to think and act like humans" },
+          { "word": "neural networks", "definition": "A series of algorithms designed to recognize patterns by interpreting sensory data" },
+          { "word": "internet of things", "definition": "The interconnection of everyday devices to the internet for data sharing" },
+          { "word": "cryptography", "definition": "The practice of securing communication through codes to protect information" },
+          { "word": "biometrics", "definition": "The measurement and statistical analysis of people's unique physical and behavioral characteristics" },
+          { "word": "digital disruption", "definition": "Innovations that drastically change the way industries operate" },
+          { "word": "big data", "definition": "Large, complex data sets that require advanced tools to analyze and interpret" },
+          { "word": "augmented intelligence", "definition": "The combination of human and artificial intelligence to enhance decision-making" },
+          { "word": "virtual reality", "definition": "A simulated experience that can be similar to or completely different from the real world" },
+          { "word": "5G technology", "definition": "The fifth generation of mobile network technology that provides faster speeds and more reliable connections" }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "Health and Fitness",
+        "words": [
+          { "word": "epigenetics", "definition": "The study of changes in organisms caused by modifications in gene expression" },
+          { "word": "holistic wellness", "definition": "A wellness approach that addresses physical, mental, emotional, and spiritual health" },
+          { "word": "biofeedback", "definition": "The process of using sensors to measure bodily functions and feedback to improve health" },
+          { "word": "nutrigenomics", "definition": "The study of how food and nutrition affect genes and health outcomes" },
+          { "word": "preventative medicine", "definition": "Medical practices aimed at preventing disease rather than treating it" },
+          { "word": "cardiovascular fitness", "definition": "The ability of the heart and lungs to supply oxygen to the muscles during prolonged physical activity" },
+          { "word": "intermittent fasting", "definition": "An eating pattern where you cycle between periods of eating and fasting" },
+          { "word": "personalized medicine", "definition": "Medical treatment tailored to individual genetic profiles and lifestyle" },
+          { "word": "mental resilience", "definition": "The ability to withstand or recover from difficult situations" },
+          { "word": "anti-aging", "definition": "The prevention or slowing down of the aging process through various methods" }
+        ]
+      }
+    ]
+  }
+  
+]

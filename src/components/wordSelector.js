@@ -10,38 +10,10 @@ const WordSelector = () => {
   const [error, setError] = useState("");
 
   // Backend'den kelimeleri almak için bir fonksiyon
-  const fetchWords = async () => {
-    try {
-      const response = await axios.get(
-        `http://localhost:3001/fetchWords/${level}/${topic}`
-      );
-      setWords(response.data);
-    } catch (error) {
-      setError("Kelime listesi alınamadı: " + error.message);
-    }
-  };
 
   // Telaffuz bilgisini almak için fonksiyon
-  const fetchPronunciation = async (word) => {
-    try {
-      const response = await axios.get(
-        `http://localhost:3001/fetchPronunciation/${word}`
-      );
-      const audioUrl =
-        response.data.results[0].lexicalEntries[0].entries[0].pronunciations[0]
-          .audioFile;
-      setPronunciation(audioUrl);
-      setError("");
-    } catch (error) {
-      setPronunciation(null);
-      setError("Kelime telaffuz bilgisi alınamadı: " + error.message);
-    }
-  };
 
   // İlk başta kelimeleri alacak şekilde useEffect kullanıyoruz
-  useEffect(() => {
-    fetchWords();
-  }, [level, topic]);
 
   return (
     <div>
@@ -50,7 +22,7 @@ const WordSelector = () => {
       {/* Seviye seçimi */}
       <div>
         <label>Seviye:</label>
-        <select value={level} onChange={(e) => setLevel(e.target.value)}>
+        <select value={level}>
           <option value="A1">A1</option>
           <option value="B1">B1</option>
           <option value="C1">C1</option>
@@ -60,7 +32,7 @@ const WordSelector = () => {
       {/* Konu seçimi */}
       <div>
         <label>Konu:</label>
-        <select value={topic} onChange={(e) => setTopic(e.target.value)}>
+        <select value={topic}>
           <option value="dailyLife">Daily Life</option>
           <option value="workAndBusiness">Work and Business</option>
           <option value="travel">Travel</option>
@@ -72,10 +44,7 @@ const WordSelector = () => {
       {/* Kelimeler listesi */}
       <div>
         <label>Kelime Seçin:</label>
-        <select
-          onChange={(e) => setSelectedWord(e.target.value)}
-          value={selectedWord}
-        >
+        <select value={selectedWord}>
           <option value="">Kelime Seçin</option>
           {words.map((word) => (
             <option key={word} value={word}>
@@ -83,9 +52,7 @@ const WordSelector = () => {
             </option>
           ))}
         </select>
-        <button onClick={() => fetchPronunciation(selectedWord)}>
-          Telaffuz Al
-        </button>
+        <button>Telaffuz Al</button>
       </div>
 
       {/* Telaffuz bilgisi varsa ses oynat */}

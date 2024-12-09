@@ -1,6 +1,6 @@
-/*  import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { getWordData } from "../services/api";
- import Recorder from "recorder.js"; // Ses kaydetme için kütüphane
+import Recorder from "recorder.js"; // Ses kaydetme için kütüphane
 
 const WordPronunciation = ({ word }) => {
   const [wordData, setWordData] = useState(null);
@@ -47,11 +47,9 @@ const WordPronunciation = ({ word }) => {
       <button onClick={stopRecording} disabled={!isRecording}>
         Stop Recording
       </button>
-      {/* Ses kaydını dinlet }
       <audio controls>
         <source src={URL.createObjectURL(audioBlob)} />
       </audio>
-      {/* Oxford Dictionaries telaffuzunu dinlet }
       <audio controls>
         <source
           src={
@@ -64,4 +62,3 @@ const WordPronunciation = ({ word }) => {
 };
 
 export default WordPronunciation;
-*/
