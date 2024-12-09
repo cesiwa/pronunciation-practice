@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import wordsData from "../data/levels.json"; // JSON dosyanızı buraya import edin
+/* import wordsData from "../data/levels.json"; // JSON dosyanızı buraya import edin */
+import topicsLevels from "../data/levels.json";
 import Header from "../components/Header";
 
 function LearningPage() {
@@ -13,11 +14,14 @@ function LearningPage() {
   const [filteredWords, setFilteredWords] = useState([]);
 
   useEffect(() => {
-    // JSON verisinden, seçilen level ve topic'e göre filtreleme yapılır
-    const filtered = wordsData.filter(
-      (word) => word.level === level && word.topic === topic
-    );
-    setFilteredWords(filtered);
+    // JSON verisinden seçilen level ve topic'e göre filtreleme
+    const selectedLevel = topicsLevels.find((item) => item.level === level);
+    if (selectedLevel) {
+      const selectedTopic = selectedLevel.topics.find((t) => t.name === topic);
+      if (selectedTopic) {
+        setFilteredWords(selectedTopic.words || []); // Eğer words varsa ayarla, yoksa boş bir array
+      }
+    }
   }, [level, topic]);
 
   const handleNextWord = () => {
