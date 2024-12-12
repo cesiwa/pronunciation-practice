@@ -10,9 +10,52 @@ function SelectPage() {
   const topics = topicsLevels.find((item) => item.level === selectedLevel);
   const topicsLevel = topics ? topics.topics : [];
 
-  const handleStartLearning = () => {
+  const [words, setWords] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  /*   const handleStartLearning = () => {
     if (selectedLevel && selectedTopic) {
       navigate(`/learning?level=${selectedLevel}&topic=${selectedTopic}`);
+    } else {
+      alert("Please select both level and topic");
+    }
+  }; */
+
+  const handleStartLearning = async () => {
+    if (selectedLevel && selectedTopic) {
+      try {
+        const response = await fetch(
+          `http://localhost:5005/words?level=${selectedLevel}&topic=${selectedTopic}`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              level: selectedLevel,
+              topicId: selectedTopic,
+            }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (!data.words) {
+          throw new Error("Invalid response format");
+        }
+
+        // Navigate ile fetch edilen veriyi state ile gönderiyoruz
+        navigate(`/learning`, {
+          state: { words: data, level: selectedLevel, topic: selectedTopic },
+        });
+      } catch (error) {
+        console.error("Error fetching words:", error);
+        alert("Failed to load words. Please try again.");
+      }
     } else {
       alert("Please select both level and topic");
     }
@@ -50,7 +93,9 @@ function SelectPage() {
           >
             <option value="">Select Topic</option>
             {topicsLevel.map((name) => (
-              <option>{name.name}</option>
+              <option key={name.id} value={name.name}>
+                {name.name}
+              </option>
             ))}
           </select>
         )}

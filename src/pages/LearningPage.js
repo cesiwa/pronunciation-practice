@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import { useLocation } from "react-router-dom";
 /* import wordsData from "../data/levels.json"; // JSON dosyanızı buraya import edin */
 import topicsLevels from "../data/levels.json";
@@ -7,9 +8,11 @@ import AudioRecorder from "../components/AudioRecorder";
 
 function LearningPage() {
   const location = useLocation();
-  const params = new URLSearchParams(location.search);
+  const { words = [], level, topic } = location.state || {}; // Navigate ile gelen state'i alıyoruz
+
+  const params = new URLSearchParams(location.search); /* 
   const level = params.get("level");
-  const topic = params.get("topic");
+  const topic = params.get("topic"); */
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [filteredWords, setFilteredWords] = useState([]);
@@ -27,7 +30,7 @@ function LearningPage() {
 
   const handleNextWord = () => {
     setCurrentWordIndex((prevIndex) =>
-      prevIndex < filteredWords.length - 1 ? prevIndex + 1 : prevIndex
+      prevIndex < words.length - 1 ? prevIndex + 1 : prevIndex
     );
   };
 
@@ -46,10 +49,12 @@ function LearningPage() {
         {filteredWords.length > 0 ? (
           <div className="bg-white text-gray-800 p-6 rounded-lg shadow-lg w-11/12 max-w-md text-center">
             <h2 className="text-2xl font-bold mb-4">
-              Word: {filteredWords[currentWordIndex].word}
+              Word: {words[currentWordIndex].word}
             </h2>
             <p className="text-lg italic mb-6">
-              Definition: {filteredWords[currentWordIndex].definition}
+              Definition:{" "}
+              {words[currentWordIndex].definitions[0] ||
+                "No definition available"}
             </p>
             <AudioRecorder />
             <div className="flex justify-between">

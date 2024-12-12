@@ -1,47 +1,89 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 const axios = require("axios");
 
 const app = express();
 
 // Middleware
-app.use(bodyParser.json());
+app.use(express.json()); // Body parser
 app.use(cors());
 
-// API endpoint - Kelime verisini al
-app.get("/word/:word", async (req, res) => {
-  const word = req.params.word;
-  console.log(`Request received for word: ${word}`);
+// Oxford Dictionaries API credentials
+const apiKey = "77b1949c33090aa1e7aadf68b6b7ea96";
+const appId = "f7411cb1";
 
-  // Oxford Dictionaries API anahtarlarınız
-  const apiKey = "77b1949c33090aa1e7aadf68b6b7ea96";
-  const appId = "f7411cb1";
+// Load JSON data
+const jsonData = require("../src/data/levels.json");
+
+// API endpoint - Fetch words and definitions
+app.post("/words", async (req, res) => {
+  const { topicId, level } = req.body;
+
+  // Filter JSON data
+  const selectedTopic = jsonData.topics.find(
+    (topic) => topic.id === topicId && topic.level === level
+  );
+
+  if (!selectedTopic) {
+    return res.status(404).json({ error: "Topic or level not found" });
+  }
+
+  const words = selectedTopic.words.slice(0, 10); // Limit to first 10 words
 
   try {
-    // API'ye istek gönderiyoruz
-    const response = await axios.get(
-      `https://od-api-sandbox.oxforddictionaries.com/api/v2/entries/en-us/${word}`,
-      {
-        headers: {
-          app_id: appId,
-          app_key: apiKey,
-        },
-      }
+    const results = await Promise.all(
+      words.map(async (wordObj) => {
+        try {
+          const response = await axios.get(
+            `https://od-api.oxforddictionaries.com/api/v2/entries/en-us/${wordObj.word}`,
+            {
+              headers: {
+                app_id: appId,
+                app_key: apiKey,
+              },
+            }
+          );
+
+          const wordData = response.data;
+          const definitions = [];
+          const audioFiles = [];
+
+          wordData.results[0]?.lexicalEntries.forEach((entry) => {
+            entry.entries.forEach((e) => {
+              e.senses.forEach((sense) => {
+                if (sense.definitions) {
+                  definitions.push(...sense.definitions);
+                }
+              });
+            });
+
+            entry.pronunciations?.forEach((pronunciation) => {
+              if (pronunciation.audioFile) {
+                audioFiles.push(pronunciation.audioFile);
+              }
+            });
+          });
+
+          return { word: wordObj.word, definitions, audioFiles };
+        } catch (error) {
+          console.error(
+            `Error fetching data for word: ${wordObj.word}`,
+            error.message
+          );
+          return { word: wordObj.word, definitions: [], audioFiles: [] };
+        }
+      })
     );
 
-    // Başarılı ise kelime verisini döndürüyoruz
-    res.json(response.data);
+    res.json(results);
   } catch (error) {
-    console.error(
-      "Error details:",
-      error.response ? error.response.data : error.message
-    ); // Hata mesajını logla
-    res.status(500).send("Error fetching word data");
+    console.error("Unexpected error:", error.message);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 
-// Sunucuyu başlat
-app.listen(5005, () => {
-  console.log("Server is running on http://localhost:5005");
+// Start the server
+const PORT = 5005;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
