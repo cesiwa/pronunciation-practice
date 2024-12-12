@@ -74,7 +74,7 @@ app.post("/words", async (req, res) => {
         }
       })
     );
-
+    /* ddmkds */
     res.json(results);
   } catch (error) {
     console.error("Unexpected error:", error.message);

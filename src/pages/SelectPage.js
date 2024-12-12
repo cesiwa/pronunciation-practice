@@ -8,6 +8,7 @@ function SelectPage() {
   const [selectedLevel, setSelectedLevel] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
   const topics = topicsLevels.find((item) => item.level === selectedLevel);
+
   const topicsLevel = topics ? topics.topics : [];
 
   const [words, setWords] = useState([]);
