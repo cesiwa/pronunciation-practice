@@ -23,6 +23,8 @@ function SelectPage() {
     }
   }; */
 
+  //selectedlevel ve selectedtopic doğru geliyor. kontrol edildi
+
   const handleStartLearning = async () => {
     if (selectedLevel && selectedTopic) {
       try {
@@ -40,6 +42,9 @@ function SelectPage() {
           }
         );
 
+        console.log("Response status:", response.status);
+        console.log("Response body (raw):", await response.text());
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -55,6 +60,7 @@ function SelectPage() {
         });
       } catch (error) {
         console.error("Error fetching words:", error);
+
         alert("Failed to load words. Please try again.");
       }
     } else {
@@ -102,6 +108,7 @@ function SelectPage() {
         )}
 
         {/* Start Learning Butonu */}
+
         <button
           onClick={handleStartLearning}
           className="bg-blue-800 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700"

@@ -18,14 +18,22 @@ const jsonData = require("../src/data/levels.json");
 // API endpoint - Fetch words and definitions
 app.post("/words", async (req, res) => {
   const { topicId, level } = req.body;
+  console.log("Received data:", topicId, level); //bunlar doğru
+  console.log("JSON data structure:", jsonData);
 
   // Filter JSON data
-  const selectedTopic = jsonData.topics.find(
-    (topic) => topic.id === topicId && topic.level === level
+  const selectedTopic = jsonData.find(
+    (data) =>
+      data.topics.find((id) => id.id) === topicId && data.level === level
   );
 
   if (!selectedTopic) {
     return res.status(404).json({ error: "Topic or level not found" });
+  }
+
+  const selectedLevel = jsonData.find((item) => item.level === level);
+  if (!selectedLevel) {
+    return res.status(404).json({ error: "Level not found" });
   }
 
   const words = selectedTopic.words.slice(0, 10); // Limit to first 10 words
