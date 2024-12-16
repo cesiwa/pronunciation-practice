@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { useLocation } from "react-router-dom";
-/* import wordsData from "../data/levels.json"; // JSON dosyanızı buraya import edin */
+/* import sData from "../data/levels.json"; // JSON dosyanızı buraya import edin */
 import topicsLevels from "../data/levels.json";
 import Header from "../components/Header";
 import AudioRecorder from "../components/AudioRecorder";
