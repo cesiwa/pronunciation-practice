@@ -6,13 +6,11 @@ import LearningPage from "./pages/LearningPage";
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/select" element={<SelectPage />} />
-        <Route path="/learning" element={<LearningPage />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/select" element={<SelectPage />} />
+      <Route path="/learning" element={<LearningPage />} />
+    </Routes>
   );
 };
 
