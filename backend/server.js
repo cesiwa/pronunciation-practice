@@ -16,17 +16,34 @@ const appId = "f7411cb1";
 const jsonData = require("../src/data/levels.json");
 
 // API endpoint - Fetch words and definitions
-app.post("/words", async (req, res) => {
-  const { topicId, level } = req.body;
-  console.log("Received data:", topicId, level); //bunlar doğru
+app.all("*", async (req, res) => {
+  const { topicId, level, topicNumber } = req.body;
+  console.log("Received data:", topicId, level, topicNumber); //bunlar doğru
   console.log("JSON data structure:", jsonData);
 
   // Filter JSON data
-  const selectedTopic = jsonData.find(
+  /*   const selectedTopic = jsonData.find(
     (data) =>
-      data.topics.find((id) => id.id) === topicId && data.level === level
-  );
+      data.topics.find((id) => id.id) === topicNumber && data.level === level
+  ); */
+  // Filter JSON data
+  const selectedTopic = jsonData.find((data) => {
+    const topicExists = data.topics.some((topic) => topic.id === topicNumber);
+    console.log("Checking data:", {
+      levelMatch: data.level === level,
+      topicExists,
+    });
 
+    return topicExists && data.level === level;
+  });
+
+  if (!selectedTopic) {
+    return res.status(404).json({ error: "Topic or level not found" });
+  }
+
+  console.log("Selected Topic:", selectedTopic);
+
+  res.json({ topic: selectedTopic });
   if (!selectedTopic) {
     return res.status(404).json({ error: "Topic or level not found" });
   }
@@ -36,13 +53,18 @@ app.post("/words", async (req, res) => {
     return res.status(404).json({ error: "Level not found" });
   }
 
-  const words = selectedTopic.words.slice(0, 10); // Limit to first 10 words
+  /*  const words = selectedTopic.words.slice(0, 10); // Limit to first 10 words */
+  const words =
+    selectedTopic?.topics?.flatMap((topic) =>
+      topic.words.map((wordObj) => wordObj.word)
+    ) || [];
 
   try {
     const results = await Promise.all(
       words.map(async (wordObj) => {
         try {
           const response = await axios.get(
+            //burayı bir sor belki post olması geekiyodur
             `https://od-api.oxforddictionaries.com/api/v2/entries/en-us/${wordObj.word}`,
             {
               headers: {

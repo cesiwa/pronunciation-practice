@@ -20,6 +20,7 @@ function LearningPage() {
   useEffect(() => {
     // JSON verisinden seçilen level ve topic'e göre filtreleme
     const selectedLevel = topicsLevels.find((item) => item.level === level);
+
     if (selectedLevel) {
       const selectedTopic = selectedLevel.topics.find((t) => t.name === topic);
       if (selectedTopic) {

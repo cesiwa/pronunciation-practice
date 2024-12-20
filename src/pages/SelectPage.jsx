@@ -7,21 +7,20 @@ function SelectPage() {
   const navigate = useNavigate(); // useHistory yerine useNavigate
   const [selectedLevel, setSelectedLevel] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
+
   const topics = topicsLevels.find((item) => item.level === selectedLevel);
 
   const topicsLevel = topics ? topics.topics : [];
 
+  /*   const topicNumber = topicsLevels.find(
+    (item) => item.level === selectedLevel
+  ).id; */
+  const topicNumber =
+    topicsLevels.find((item) => item.level === selectedLevel)?.id || null;
+
   const [words, setWords] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  /*   const handleStartLearning = () => {
-    if (selectedLevel && selectedTopic) {
-      navigate(`/learning?level=${selectedLevel}&topic=${selectedTopic}`);
-    } else {
-      alert("Please select both level and topic");
-    }
-  }; */
 
   //selectedlevel ve selectedtopic doğru geliyor. kontrol edildi
 
@@ -29,7 +28,7 @@ function SelectPage() {
     if (selectedLevel && selectedTopic) {
       try {
         const response = await fetch(
-          `http://localhost:5005/words?level=${selectedLevel}&topic=${selectedTopic}`,
+          `http://localhost:5005/words?level=${selectedLevel}&topic=${selectedTopic}`, //burası selectedtopic değil de topicNumber olabilir
           {
             method: "POST",
             headers: {
@@ -38,36 +37,24 @@ function SelectPage() {
             body: JSON.stringify({
               level: selectedLevel,
               topicId: selectedTopic,
+              topicNumber: topicNumber,
             }),
           }
         );
 
-        console.log("Response status:", response.status);
-        console.log("Response body (raw):", await response.text());
-
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
         const data = await response.json();
-        if (!data.words) {
-          throw new Error("Invalid response format");
-        }
-
-        // Navigate ile fetch edilen veriyi state ile gönderiyoruz
-        navigate(`/learning`, {
-          state: { words: data, level: selectedLevel, topic: selectedTopic },
-        });
+        console.log("Fetched words:", data);
       } catch (error) {
-        console.error("Error fetching words:", error);
-
-        alert("Failed to load words. Please try again.");
+        alert("D to load words. Please try again.");
       }
     } else {
       alert("Please select both level and topic");
     }
   };
-
   return (
     <div className="min-h-screen bg-blue-600	">
       <Header />
