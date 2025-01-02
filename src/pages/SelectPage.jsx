@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import topicsLevels from "../data/levels.json";
 
 function SelectPage() {
   const navigate = useNavigate(); // useHistory yerine useNavigate
+
   const [selectedLevel, setSelectedLevel] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
 
-  const topics = topicsLevels.find((item) => item.level === selectedLevel);
+  const topics = topicsLevels.find((item) => item.level === selectedLevel); //leveldata
+  const topics2 = topics ? topics.topics : [];
 
-  const topicsLevel = topics ? topics.topics : [];
+  const selectedTopic2 = topics2.find((topic) => topic.id === selectedTopic);
+  const words = selectedTopic2 ? selectedTopic2.words : [];
+
+  const topicsLevel = topics ? topics.topics : []; //leveller
 
   /*   const topicNumber = topicsLevels.find(
     (item) => item.level === selectedLevel
@@ -18,17 +24,13 @@ function SelectPage() {
   const topicNumber =
     topicsLevels.find((item) => item.level === selectedLevel)?.id || null;
 
-  const [words, setWords] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
   //selectedlevel ve selectedtopic doğru geliyor. kontrol edildi
 
   const handleStartLearning = async () => {
     if (selectedLevel && selectedTopic) {
       try {
         const response = await fetch(
-          `http://localhost:5005/words?level=${selectedLevel}&topic=${selectedTopic}`, //burası selectedtopic değil de topicNumber olabilir
+          `http://localhost:5005/words`, //burası selectedtopic değil de topicNumber olabilir
           {
             method: "POST",
             headers: {
@@ -49,7 +51,7 @@ function SelectPage() {
         const data = await response.json();
         console.log("Fetched words:", data);
       } catch (error) {
-        alert("D to load words. Please try again.");
+        alert("Failed to load words. Please try again");
       }
     } else {
       alert("Please select both level and topic");
@@ -70,38 +72,60 @@ function SelectPage() {
           className="px-4 py-2 border rounded-lg mb-4"
         >
           <option value="">Select Level</option>
-          {topicsLevels.map((levelData) => (
-            <option key={levelData.id} value={levelData.level}>
-              {levelData.level}
+          {topicsLevels.map((level) => (
+            <option key={level.id} value={level.level}>
+              {level.level}
             </option>
           ))}
         </select>
 
         {/* Topic Seçimi */}
-        {selectedLevel && (
-          <select
-            value={selectedTopic}
-            onChange={(e) => setSelectedTopic(e.target.value)}
-            disabled={!selectedLevel}
-            className="px-4 py-2 border rounded-lg mb-4"
-          >
-            <option value="">Select Topic</option>
-            {topicsLevel.map((name) => (
-              <option key={name.id} value={name.name}>
-                {name.name}
+        {topics2.length > 0 && (
+          <label>
+            <select
+              value={selectedTopic || ""}
+              onChange={(e) => setSelectedTopic(Number(e.target.value))}
+              className="px-4 py-2 border rounded-lg mb-4"
+            >
+              <option value="" disabled>
+                Select a topic
               </option>
-            ))}
-          </select>
+              {topics2.map((topic) => (
+                <option key={topic.id} value={topic.id}>
+                  {topic.name}
+                </option>
+              ))}
+            </select>
+          </label>
         )}
-
+        {/* Words Listesi */}
+        {words.length > 0 && (
+          <div>
+            <h2>Words in {selectedTopic2.name}</h2>
+            <ul>
+              {words.map((word, index) => (
+                <li key={index}>
+                  <strong>{word.word}</strong>: {word.definition}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         {/* Start Learning Butonu */}
 
-        <button
-          onClick={handleStartLearning}
-          className="bg-blue-800 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700"
+        <Link
+          to={`/words?name=${topicNumber}&age=${topicsLevel.map(
+            (item) => item.name
+          )}&topic=${selectedTopic}&words=${words.map(
+            (item) => item.word
+          )}&definition=${words.map(
+            (item) => item.definition
+          )}&words2=${encodeURIComponent(JSON.stringify(words))}`}
         >
-          Start Learning
-        </button>
+          <button className="bg-blue-800 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">
+            Start Learning
+          </button>
+        </Link>
       </main>
     </div>
   );
