@@ -98,8 +98,8 @@
           { "word": "weekend", "definition": "The days at the end of the week" },
           { "word": "holiday", "definition": "A day for celebration or relaxation" },
           { "word": "laundry", "definition": "Clothes that need to be washed" },
-          { "word": "shopping mall", "definition": "A large building with many stores" },
-          { "word": "alarm clock", "definition": "A clock that wakes you up" },
+          { "word": "mall", "definition": "A large building with many stores" },
+          { "word": "clock", "definition": "A clock that wakes you up" },
           { "word": "commute", "definition": "The journey to and from work" },
           { "word": "pet", "definition": "An animal kept at home" },
           { "word": "neighbor", "definition": "A person who lives nearby" }
@@ -113,7 +113,7 @@
           { "word": "salary", "definition": "Money you earn from work" },
           { "word": "teamwork", "definition": "Working together as a group" },
           { "word": "promotion", "definition": "A rise in position or rank" },
-          { "word": "office supplies", "definition": "Things used for work like pens and paper" },
+          { "word": "office", "definition": "Things used for work like pens and paper" },
           { "word": "supervisor", "definition": "A person who oversees work" },
           { "word": "schedule", "definition": "A plan for activities or events" },
           { "word": "presentation", "definition": "A formal talk or display" },
@@ -145,11 +145,11 @@
           { "word": "software", "definition": "Programs used by a computer" },
           { "word": "download", "definition": "To transfer data to your device" },
           { "word": "upload", "definition": "To transfer data from your device" },
-          { "word": "Wi-Fi", "definition": "A wireless network for internet access" },
+          { "word": "WiFi", "definition": "A wireless network for internet access" },
           { "word": "password", "definition": "A secret code for access" },
           { "word": "tablet", "definition": "A portable touch-screen device" },
           { "word": "file", "definition": "A collection of data stored digitally" },
-          { "word": "search engine", "definition": "A tool to find information online" },
+          { "word": "browser", "definition": "A tool to find information online" },
           { "word": "account", "definition": "A personal profile on a platform" }
         ]
       },
@@ -185,7 +185,7 @@
           { "word": "commute", "definition": "To travel to work or school regularly" },
           { "word": "vacuum", "definition": "A cleaning device that uses suction" },
           { "word": "laundry", "definition": "Clothes that need washing or cleaning" },
-          { "word": "grocery shopping", "definition": "The act of buying food and household items" },
+          { "word": "grocery", "definition": "The act of buying food and household items" },
           { "word": "calendar", "definition": "A system of organizing days for social, religious, or administrative purposes" },
           { "word": "appointment", "definition": "A prearranged meeting" },
           { "word": "chore", "definition": "A small job or task, typically one that is repeated" }
@@ -233,7 +233,7 @@
           { "word": "app", "definition": "A software application for mobile devices" },
           { "word": "website", "definition": "A collection of web pages on the internet" },
           { "word": "update", "definition": "To bring something up to date or improve it" },
-          { "word": "social media", "definition": "Websites and applications that allow users to share content" },
+          { "word": "laptop", "definition": "A portable computer that is small enough to use on one's lap," },
           { "word": "security", "definition": "Protection against unauthorized access or harm" },
           { "word": "cloud", "definition": "A system of storing data on remote servers accessed via the internet" },
           { "word": "data", "definition": "Information processed or stored by a computer" }
@@ -247,8 +247,8 @@
           { "word": "diet", "definition": "The types of food a person eats" },
           { "word": "nutrition", "definition": "The process of taking in and using food" },
           { "word": "hydration", "definition": "The process of drinking enough water" },
-          { "word": "well-being", "definition": "A state of being healthy and happy" },
-          { "word": "weight loss", "definition": "The process of reducing body weight" },
+          { "word": "Endurance", "definition": "A term used to describe an individual's ability to do prolonged exercise without feeling fatigue" },
+          { "word": "muscle", "definition": "A body tissue that contracts to produce movement" },
           { "word": "yoga", "definition": "A system of physical and mental exercises" },
           { "word": "stress", "definition": "Mental or emotional strain resulting from difficult situations" },
           { "word": "vitamins", "definition": "Essential nutrients that the body needs" },
@@ -301,13 +301,13 @@
           { "word": "exploration", "definition": "The act of traveling to discover new places" },
           { "word": "backpacking", "definition": "Traveling with a backpack, usually on a budget" },
           { "word": "vacation", "definition": "A period of time spent away from work for relaxation" },
-          { "word": "cultural exchange", "definition": "The exchange of cultural ideas and experiences between countries" },
-          { "word": "local cuisine", "definition": "The traditional food of a particular area or region" },
-          { "word": "tourist attraction", "definition": "A place or site visited by tourists" },
+          { "word": "souvenir", "definition": "An item to remember a place" },
+          { "word": "cruise", "definition": "A holiday on a large ship" },
+          { "word": "movement", "definition": "A place or site visited by tourists" },
           { "word": "excursion", "definition": "A short trip or outing for leisure" },
           { "word": "guidebook", "definition": "A book that provides detailed information for tourists" },
           { "word": "hostel", "definition": "A low-cost place to stay, often used by young travelers" },
-          { "word": "jet lag", "definition": "Tiredness or other symptoms caused by traveling across time zones" }
+          { "word": "jJourney", "definition": "trip, adventure and tourism" }
         ]
       },
       {
@@ -315,15 +315,15 @@
         "name": "Technology",
         "words": [
           { "word": "cloud computing", "definition": "The delivery of computing services over the internet" },
-          { "word": "artificial intelligence", "definition": "The simulation of human intelligence in machines" },
+          { "word": "knowledge", "definition": "Knowledge is an awareness of facts, a familiarity with individuals and situations, or a practical skill." },
           { "word": "innovation", "definition": "The introduction of new ideas, methods, or devices" },
-          { "word": "virtual reality", "definition": "A simulated experience created by computer technology" },
+          { "word": "invention", "definition": "An invention is a unique or novel device, method, composition, idea or process" },
           { "word": "automation", "definition": "The use of machines and technology to perform tasks without human intervention" },
           { "word": "smartphone", "definition": "A mobile phone that has advanced capabilities beyond voice communication" },
-          { "word": "internet of things", "definition": "The connection of everyday objects to the internet" },
+          { "word": "framework", "definition": "Look up framework in Wiktionary, the free dictionary." },
           { "word": "cybersecurity", "definition": "The protection of computer systems from theft or damage" },
           { "word": "networking", "definition": "The practice of connecting computers or devices to share data" },
-          { "word": "software development", "definition": "The process of designing and creating computer programs" }
+          { "word": "Pseudoscience", "definition": "Pseudoscience consists of statements, beliefs, or practices that claim to be both scientific and factual but are incompatible with the scientific method" }
         ]
       },
       {
@@ -334,10 +334,10 @@
           { "word": "workout", "definition": "Physical exercise, especially to improve health and fitness" },
           { "word": "cardio", "definition": "Exercise that raises the heart rate, such as running or swimming" },
           { "word": "muscle", "definition": "A body tissue that contracts to produce movement" },
-          { "word": "fitness routine", "definition": "A set plan for regular physical exercise" },
+          { "word": "Longevity", "definition": "Longevity may refer to especially long-lived members of a population, whereas life expectancy is defined statistically as the average number of years" },
           { "word": "yoga", "definition": "A practice of physical and mental exercises for health" },
           { "word": "meditation", "definition": "The practice of focusing the mind to achieve mental clarity" },
-          { "word": "sleep hygiene", "definition": "Practices that promote better sleep quality" },
+          { "word": "Sweatsuit", "definition": "Practices that promote better sleep quality" },
           { "word": "hydration", "definition": "The process of providing the body with enough water" },
           { "word": "calorie", "definition": "A unit of energy provided by food" }
         ]
@@ -353,7 +353,7 @@
         "id": 21,
         "name": "Daily Life",
         "words": [
-          { "word": "self-discipline", "definition": "The ability to control one's behavior and emotions" },
+          { "word": "mundane", "definition": "In subcultural and fictional uses, a mundane is a person who does not belong to a particular group" },
           { "word": "prioritization", "definition": "The process of deciding what tasks are most important" },
           { "word": "well-being", "definition": "A state of being comfortable, healthy, or happy" },
           { "word": "sustainability", "definition": "The ability to maintain a certain process or state indefinitely" },

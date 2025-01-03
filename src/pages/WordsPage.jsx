@@ -36,13 +36,6 @@ function WordsPage() {
 
   return (
     <div>
-      <ul>
-        {words2.map((word, index) => (
-          <li key={index}>
-            <strong>{word.word}</strong>: {word.definition}
-          </li>
-        ))}
-      </ul>
       <div className="min-h-screen bg-blue-600	 text-white">
         <Header />
         <main className="flex flex-col items-center justify-center py-10">
