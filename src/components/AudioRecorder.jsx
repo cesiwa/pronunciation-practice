@@ -31,7 +31,9 @@ function AudioRecorder() {
       {audioURL && (
         <div className="mt-6">
           <h3 className="text-lg font-medium">Kaydedilen Ses</h3>
-          <audio controls src={audioURL} className="mt-2"></audio>
+          <audio controls src={audioURL} className="mt-2">
+            <source src={audioURL} type="audio/mp3" />
+          </audio>
         </div>
       )}
     </div>
