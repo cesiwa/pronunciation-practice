@@ -5,7 +5,7 @@ export default function useRecorder() {
   const [isRecording, setIsRecording] = useState(false);
   const mediaRecorderRef = useRef(null);
   const audioChunks = useRef([]);
-
+  2;
   const startRecording = async () => {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     mediaRecorderRef.current = new MediaRecorder(stream);
@@ -38,6 +38,7 @@ export default function useRecorder() {
     formData.append("audio", audioBlob, "recording.mp3");
 
     try {
+      // Ses dosyasını yükle
       const response = await fetch("http://localhost:5001/upload", {
         method: "POST",
         body: formData,
