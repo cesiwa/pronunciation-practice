@@ -32,7 +32,7 @@ export default function useRecorder() {
     mediaRecorderRef.current.stop();
     setIsRecording(false);
   };
-
+  //burası değişecek
   const uploadAudio = async (audioBlob) => {
     const formData = new FormData();
     formData.append("audio", audioBlob, "recording.mp3");
