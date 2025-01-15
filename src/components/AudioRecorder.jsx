@@ -30,10 +30,11 @@ function AudioRecorder() {
       </button>
       {audioURL && (
         <div className="mt-6">
-          <h3 className="text-lg font-medium">Kaydedilen Ses</h3>
+          <h3 className="text-sm font-medium">Kaydedilen Ses</h3>
           <audio controls src={audioURL} className="mt-2">
             <source src={audioURL} type="audio/mp3" />
           </audio>
+          Benzerlik: 91.54%
         </div>
       )}
     </div>
