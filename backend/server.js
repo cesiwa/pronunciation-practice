@@ -1,7 +1,7 @@
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
-//Eklenecek
+
 const app = express();
 
 const { exec } = require("child_process");
