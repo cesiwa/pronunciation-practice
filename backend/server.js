@@ -3,7 +3,7 @@ const multer = require("multer");
 const path = require("path");
 
 const app = express();
-//eklenecek
+
 const { exec } = require("child_process");
 
 const compareAudioFiles = (file1, file2) => {
