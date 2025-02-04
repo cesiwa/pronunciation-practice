@@ -37,7 +37,7 @@ compareAudioFiles(file1, file2)
 // Multer için depolama ayarla
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/"); // Dosyanın kaydedileceği klasör
+    cb(null, "uploads/"); // Dosyanın kaydedileceği klas
   },
   filename: (req, file, cb) => {
     // Daha düzgün bir dosya ismi oluştur
