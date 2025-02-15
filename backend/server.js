@@ -34,7 +34,7 @@ compareAudioFiles(file1, file2)
     console.error(err);
   });
 
-// Multer için depolama ayarlana
+// Multer için depolama ayarlanacak
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "uploads/"); // Dosyanın kaydedileceği klas
