@@ -24,7 +24,7 @@ const compareAudioFiles = (file1, file2) => {
 };
 
 const file1 = "/uploads/audio_2025-01-12T15-17-23-610Z_99arkn.mp3"; // Kullanıcıdan alınan ses
-const file2 = "/uploads/hello__gb_1.mp3"; // Projedeki referans ses
+const file2 = "/uploads/hello__gb_1.mp3"; // Projedek
 
 compareAudioFiles(file1, file2)
   .then((result) => {
