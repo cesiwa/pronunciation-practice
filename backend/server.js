@@ -28,7 +28,7 @@ const file2 = "/uploads/hello__gb_1.mp3"; // Projedeki referans ses
 
 compareAudioFiles(file1, file2)
   .then((result) => {
-    console.log(result); // "Ses benzerlik oranı: 85.23%  ."
+    console.log(result); // "Ses benzerlik oranı: 85.23% var ."
   })
   .catch((err) => {
     console.error(err);
